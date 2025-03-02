@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: url('https://source.unsplash.com/1600x900/?finance,tax') no-repeat center center/cover; 
+            background: url('https://source.unsplash.com/1600x900/?finance,tax,accounting') no-repeat center center/cover;
             text-align: center;
             margin: 0;
             display: flex;
@@ -16,7 +16,7 @@
             height: 100vh;
         }
         .subscription-box {
-            background: rgba(255, 255, 255, 0.9); /* Transparent white for better readability */
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent for readability */
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 6px 15px rgba(0,0,0,0.15);
@@ -37,11 +37,13 @@
         }
         input {
             padding: 12px;
-            width: 100%;
+            width: 90%;
             border: 1px solid #ccc;
             border-radius: 6px;
             font-size: 14px;
             text-align: center;
+            display: block;
+            margin: 0 auto; /* Centers the input box */
         }
         button {
             background-color: #007bff;
@@ -74,11 +76,11 @@
 <body>
 
     <div class="subscription-box">
-        <h2>Subscribe to Our Newsletter</h2>
+        <h2>📢 Subscribe to Our Newsletter</h2>
         <p>Stay ahead with key tax updates, expert insights, and smart financial planning tips—delivered straight to your inbox.</p>
         <input type="email" id="email" placeholder="Enter your email">
         <button onclick="subscribe()">Subscribe</button>
-        <p id="confirmation">You're in! We'll keep you updated with the latest tax news.</p>
+        <p id="confirmation">✅ You're in! We'll keep you updated with the latest tax news.</p>
     </div>
 
     <script>
@@ -95,4 +97,3 @@
 
 </body>
 </html>
-
