@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Subscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+        .subscription-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+        input {
+            padding: 10px;
+            width: 250px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #confirmation {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="subscription-box">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates on inheritance tax insights.</p>
+        <input type="email" id="email" placeholder="Enter your email address">
+        <button onclick="subscribe()">Subscribe Now</button>
+        <p id="confirmation">✅ You're subscribed! Thank you. 🎉</p>
+    </div>
+
+    <script>
+        function subscribe() {
+            var email = document.getElementById("email").value;
+            if (email.trim() === "") {
+                alert("Please enter a valid email address.");
+            } else {
+                document.getElementById("confirmation").style.display = "block";
+                document.getElementById("email").value = ""; // Clear input
+            }
+        }
+    </script>
+
+</body>
+</html>
