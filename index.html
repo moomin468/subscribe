@@ -22,14 +22,14 @@
             box-shadow: 0 6px 15px rgba(0,0,0,0.15);
             display: flex;
             align-items: center;
-            max-width: 700px; /* Increased width */
+            max-width: 750px; /* Increased width */
             width: 90%;
             justify-content: space-between;
             border: 1px solid #ddd;
         }
         .text-container {
             flex: 1;
-            padding-right: 30px; /* More spacing between text and form */
+            padding-right: 30px; /* Space between text and form */
             text-align: left;
         }
         h2 {
@@ -44,6 +44,12 @@
         }
         .form-container {
             display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+        .input-row {
+            display: flex;
             align-items: center;
             gap: 10px; /* Space between input and button */
         }
@@ -56,7 +62,7 @@
             text-align: left;
         }
         button {
-            background-color: #007bff;
+            background-color: #ff6600; /* Orange color */
             color: white;
             border: none;
             padding: 12px 20px;
@@ -67,33 +73,49 @@
             white-space: nowrap;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #cc5500; /* Darker orange */
+        }
+        #confirmation {
+            display: none;
+            color: #28a745;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #28a745;
+            border-radius: 6px;
+            background: #eaf8ed;
         }
     </style>
 </head>
 <body>
 
     <div class="subscription-box">
-        <!-- Left Side - Text -->
+        <!-- Left Side - Title & Description -->
         <div class="text-container">
             <h2>📢 Subscribe to Our Newsletter</h2>
             <p>Stay ahead with key tax updates, expert insights, and smart financial planning tips—delivered straight to your inbox.</p>
         </div>
 
-        <!-- Right Side - Form (Input & Button Side by Side) -->
+        <!-- Right Side - Form -->
         <div class="form-container">
-            <input type="email" id="email" placeholder="Enter your email">
-            <button onclick="subscribe()">Subscribe</button>
+            <div class="input-row">
+                <input type="email" id="email" placeholder="Enter your email">
+                <button onclick="subscribe()">Subscribe</button>
+            </div>
+            <p id="confirmation">✅ You're in! We'll keep you updated with the latest tax news.</p>
         </div>
     </div>
 
     <script>
         function subscribe() {
             var email = document.getElementById("email").value;
+            var confirmationMessage = document.getElementById("confirmation");
+
             if (email.trim() === "") {
                 alert("Please enter a valid email address.");
             } else {
-                alert("✅ You're in! We'll keep you updated with the latest tax news.");
+                confirmationMessage.style.display = "block";
                 document.getElementById("email").value = ""; // Clear input
             }
         }
