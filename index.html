@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stay Updated on Inheritance Tax</title>
+    <title>Subscribe for Inheritance Tax Updates</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: transparent; /* No full-page background */
+            background-color: #f4f4f9;
             text-align: center;
             margin: 0;
             display: flex;
@@ -17,35 +17,46 @@
         }
         .subscription-box {
             background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
             display: inline-block;
-            max-width: 400px;
+            max-width: 420px;
             text-align: center;
+            border: 1px solid #ddd;
+        }
+        h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
         }
         input {
             padding: 12px;
-            width: 90%;
-            margin-top: 10px;
+            width: 100%;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 14px;
             text-align: center;
         }
         button {
-            background-color: #0056b3;
+            background-color: #007bff;
             color: white;
             border: none;
             padding: 12px 20px;
-            margin-top: 12px;
+            margin-top: 15px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 16px;
             transition: 0.3s;
+            width: 100%;
         }
         button:hover {
-            background-color: #003d80;
+            background-color: #0056b3;
         }
         #confirmation {
             display: none;
@@ -53,17 +64,21 @@
             font-weight: bold;
             margin-top: 15px;
             font-size: 16px;
+            padding: 10px;
+            border: 1px solid #28a745;
+            border-radius: 6px;
+            background: #eaf8ed;
         }
     </style>
 </head>
 <body>
 
     <div class="subscription-box">
-        <h2>📢 Get Inheritance Tax Updates</h2>
-        <p>Stay ahead with key tax updates, expert insights, and smart planning tips. No spam—just what matters.</p>
+        <h2>Stay Updated on Inheritance Tax</h2>
+        <p>Get the latest tax updates, expert insights, and smart planning tips—straight to your inbox.</p>
         <input type="email" id="email" placeholder="Enter your email">
         <button onclick="subscribe()">Subscribe</button>
-        <p id="confirmation">✅ You're subscribed! Thank you. 🎉</p>
+        <p id="confirmation">You're subscribed! Thank you.</p>
     </div>
 
     <script>
@@ -80,3 +95,4 @@
 
 </body>
 </html>
+
